@@ -1,0 +1,29 @@
+<?php session_start();?>
+<?php include("includes/database.php");?>
+<?php include("includes/functions.php");?>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<?php
+
+if(isset($_SESSION['current_user_id'])){
+
+?>  <h4>Kies hier uw gewenste keuze</h4>
+    <ul>
+        <li><a href="blog/read.php">Lees de geplaatste artikelen.</a></li>
+        <li><a href="blog/blogger.php">Lees artikelen van u favoriete blogger.</a></li>
+        <li><a href="blog/write.php">Schrijf zelf een artikel.</a></li>
+        <li><a href="blog/add_category.php">Voeg een categorie toe.</a></li>
+    </ul>
+<?php
+
+
+}else{  //else van eerste if. if session user isset
+    redirect_to("login/login.php");
+}
+?>

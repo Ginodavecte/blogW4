@@ -1,0 +1,85 @@
+.submitComment{
+    /*padding:5px 15px;*/
+    background:white;
+    color: blue;
+    border:0 none;
+    border-bottom: 1px solid blue;
+    /*cursor:pointer;*/
+    /*-webkit-border-radius: 5px;*/
+    /*border-radius: 5px;*/
+}
+.form-area
+{
+    background-color: #FAFAFA;
+    padding: 10px 40px 60px;
+    margin: 10px 0px 60px;
+    border: 1px solid GREY;
+}
+a.deleteArticle{
+    color : red;
+}
+
+.blue{
+    /*background: blue;*/
+    color: blue;
+    /*background-color: blue;*/
+}
+
+.red{
+    color:red;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px; /*das*/
+    height: 17px;
+}
+
+.switch input {display:none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 12px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
